@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "kpgfilter",
+  "description": "Hides image from kpop general threads on 4chan",
+  "version": "1.0.1",
+  "icons": { 
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png" 
+  },
+  "content_scripts": [{
+      "matches": ["*://boards.4chan.org/mu/thread/*"], 
+      "js": ["background.js"]
+  }],
+  "permissions": [
+    "activeTab",
+    "*://boards.4chan.org/mu/thread/*"
+  ],
+    "web_accessible_resources": ["clear.js"]
+}
